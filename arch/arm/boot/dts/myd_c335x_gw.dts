@@ -950,7 +950,9 @@
 	ti,scale-data-fw = "am335x-evm-scale-data.bin";
 };
 
-
+&dcan1 {
+	status = "okay";
+};
 
 &sgx {
 	status = "disabled";
