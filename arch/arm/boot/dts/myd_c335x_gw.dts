@@ -956,14 +956,10 @@
 	ti,scale-data-fw = "am335x-evm-scale-data.bin";
 };
 
-&dcan0 {
+&dcan1 {
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&dcan1_pins_default>;
-};
-
-&dcan1 {
-	status = "okay";
 };
 
 &sgx {
