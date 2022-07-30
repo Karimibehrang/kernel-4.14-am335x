@@ -144,6 +144,12 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&wlan_pins &phy_reset_pins_default &ec20_reset_pins_default>;
 
+	dcan1_pins_default: pinmux_dcan1_pins_default {
+		pinctrl-single,pins = <
+			AM33XX_IOPAD(0x96c, PIN_INPUT | MUX_MODE2) /* (E17) uart0_rtsn.dcan1_rx */
+			AM33XX_IOPAD(0x968, PIN_OUTPUT | MUX_MODE2) /* (E18) uart0_ctsn.dcan1_tx */
+		>;
+	};
 	
 	leds_pins: pinmux_leds_pins {
 		pinctrl-single,pins = <
@@ -952,6 +958,8 @@
 
 &dcan0 {
 	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&dcan1_pins_default>;
 };
 
 &dcan1 {
