@@ -51,7 +51,7 @@ static struct platform_device omap_vout_device = {
 	.name		= "omap_vout",
 	.num_resources	= ARRAY_SIZE(omap_vout_resource),
 	.resource 	= &omap_vout_resource[0],
-	.id		= -1,
+	.id		= 1,
 };
 
 int __init omap_init_vout(void)
